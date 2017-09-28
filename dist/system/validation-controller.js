@@ -24,7 +24,7 @@ System.register(["./validator", "./validate-trigger", "./property-info", "./vali
             }
         ],
         execute: function () {
-            ValidationController = (function () {
+            ValidationController = /** @class */ (function () {
                 function ValidationController(validator, propertyParser) {
                     this.validator = validator;
                     this.propertyParser = propertyParser;
@@ -196,7 +196,7 @@ System.register(["./validator", "./validate-trigger", "./property-info", "./vali
                         // if rules were not specified, check the object map.
                         rules_2 = rules_2 || this.objects.get(object_2);
                         // property specified?
-                        if (instruction.propertyName === undefined) {
+                        if (instruction.propertyName === undefined || rules_2 instanceof ValidationController == false) {
                             // validate the specified object.
                             execute = function () { return _this.validator.validateObject(object_2, rules_2); };
                         }
@@ -409,7 +409,7 @@ System.register(["./validator", "./validate-trigger", "./property-info", "./vali
                         if (rule.__manuallyAdded__) {
                             continue;
                         }
-                        var rules = [rule];
+                        var rules = [[rule]];
                         this.validate({ object: object, propertyName: propertyName, rules: rules });
                     }
                 };

@@ -4,7 +4,7 @@ define(["require", "exports", "aurelia-dependency-injection", "./validation-cont
     /**
      * Binding behavior. Indicates the bound property should be validated.
      */
-    var ValidateBindingBehaviorBase = (function () {
+    var ValidateBindingBehaviorBase = /** @class */ (function () {
         function ValidateBindingBehaviorBase(taskQueue) {
             this.taskQueue = taskQueue;
         }

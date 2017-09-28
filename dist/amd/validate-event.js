@@ -1,7 +1,7 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var ValidateEvent = (function () {
+    var ValidateEvent = /** @class */ (function () {
         function ValidateEvent(
             /**
              * The type of validate event. Either "validate" or "reset".

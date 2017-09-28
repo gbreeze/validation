@@ -21,7 +21,7 @@ System.register(["aurelia-dependency-injection", "./validation-controller", "./v
             /**
              * Binding behavior. Indicates the bound property should be validated.
              */
-            ValidateBindingBehaviorBase = (function () {
+            ValidateBindingBehaviorBase = /** @class */ (function () {
                 function ValidateBindingBehaviorBase(taskQueue) {
                     this.taskQueue = taskQueue;
                 }

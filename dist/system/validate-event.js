@@ -5,7 +5,7 @@ System.register([], function (exports_1, context_1) {
     return {
         setters: [],
         execute: function () {
-            ValidateEvent = (function () {
+            ValidateEvent = /** @class */ (function () {
                 function ValidateEvent(
                     /**
                      * The type of validate event. Either "validate" or "reset".

@@ -1,4 +1,4 @@
-var ValidateEvent = (function () {
+var ValidateEvent = /** @class */ (function () {
     function ValidateEvent(
         /**
          * The type of validate event. Either "validate" or "reset".

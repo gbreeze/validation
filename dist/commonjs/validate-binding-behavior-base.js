@@ -7,7 +7,7 @@ var get_target_dom_element_1 = require("./get-target-dom-element");
 /**
  * Binding behavior. Indicates the bound property should be validated.
  */
-var ValidateBindingBehaviorBase = (function () {
+var ValidateBindingBehaviorBase = /** @class */ (function () {
     function ValidateBindingBehaviorBase(taskQueue) {
         this.taskQueue = taskQueue;
     }

@@ -175,7 +175,7 @@ export class ValidationController {
             // if rules were not specified, check the object map.
             rules = rules || this.objects.get(object);
             // property specified?
-            if (instruction.propertyName === undefined) {
+            if (instruction.propertyName === undefined || rules instanceof ValidationController == false) {
                 // validate the specified object.
                 execute = () => this.validator.validateObject(object, rules);
             }
@@ -375,7 +375,7 @@ export class ValidationController {
             if (rule.__manuallyAdded__) {
                 continue;
             }
-            const rules = [rule];
+            const rules = [[rule]];
             this.validate({ object, propertyName, rules });
         }
     }

@@ -9,7 +9,7 @@ import { ValidateEvent } from './validate-event';
  * Manages a set of bindings, renderers and objects.
  * Exposes the current list of validation results for binding purposes.
  */
-var ValidationController = (function () {
+var ValidationController = /** @class */ (function () {
     function ValidationController(validator, propertyParser) {
         this.validator = validator;
         this.propertyParser = propertyParser;
@@ -181,7 +181,7 @@ var ValidationController = (function () {
             // if rules were not specified, check the object map.
             rules_2 = rules_2 || this.objects.get(object_2);
             // property specified?
-            if (instruction.propertyName === undefined) {
+            if (instruction.propertyName === undefined || rules_2 instanceof ValidationController == false) {
                 // validate the specified object.
                 execute = function () { return _this.validator.validateObject(object_2, rules_2); };
             }
@@ -394,7 +394,7 @@ var ValidationController = (function () {
             if (rule.__manuallyAdded__) {
                 continue;
             }
-            var rules = [rule];
+            var rules = [[rule]];
             this.validate({ object: object, propertyName: propertyName, rules: rules });
         }
     };
